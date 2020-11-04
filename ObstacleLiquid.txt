@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObstacleLiquid : Obstacle
+public struct ObstacleLiquidVariables
 {
 
+}
+
+public class ObstacleLiquid : Obstacle
+{
+	static public ObstacleLiquidVariables OLV;
 }

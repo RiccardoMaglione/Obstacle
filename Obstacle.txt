@@ -4,8 +4,11 @@ using System.Collections.Generic;
 
 public struct ObstacleComuneVariables
 {
-	public int Damage
-	public int TierObstacle
+	public int Damage;
+	public int TierObstacle;
+	public int Life;
+	public int Resistance
+	public int Speed;
 }
 public interface IDazeable
 {
@@ -36,5 +39,13 @@ public class Obstacle : MonoBehaviour
 		int TotalDamage = OCV.Damage * OCV.TierObstacle;
 		PS.LifePlayer -= TotalDamage;
 		return PS.LifePlayer
+	}
+	static public int CalculateOwnLife()
+	{
+		if(PS.Damage - Resistance)
+		{
+			Life -= PS.Damage - Resistance;
+		}
+		return Life;
 	}
 }

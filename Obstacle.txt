@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+//using UnityEngine;
 
 public struct ObstacleComuneVariables
 {
@@ -23,5 +23,11 @@ public class Obstacle : MonoBehaviour
 		{
 			OCV.TierObstacle = 1;
 		}
+	}
+	static public int CalculateTotalDamege()
+	{
+		int TotalDamage = OCV.Damage * OCV.TierObstacle;
+		PS.LifePlayer -= TotalDamage;
+		return PS.LifePlayer
 	}
 }

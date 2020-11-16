@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+//using UnityEngine;
+
+public struct PlayerStruct
+{
+	public int LifePlayer;
+	public int SpeedPlayer;
+}
+
+public class Obstacle : MonoBehaviour
+{	
+	static public ObstacleComuneVariables OCV;
+
+	static public void Main(String[] args)
+	{
+		Start();
+		Update();
+	}
+	static private void Start()
+	{
+		Obstacle.PS = PSM;
+	}
+	static private void Update()
+	{
+		while(true)
+		{
+			PSM = Obstacle.PS;
+		}
+	}
+}

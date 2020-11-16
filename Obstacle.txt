@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+//using System.Collections;
+//using System.Collections.Generic;
 //using UnityEngine;
+using System;
 
 public struct ObstacleComuneVariables
 {
@@ -42,9 +43,9 @@ public class Obstacle : MonoBehaviour
 	}
 	static public int CalculateOwnLife()
 	{
-		if(PS.Damage - Resistance)
+		if(PS.DamagePlayer - Resistance)
 		{
-			Life -= PS.Damage - Resistance;
+			Life -= PS.DamagePlayer - Resistance;
 		}
 		return Life;
 	}

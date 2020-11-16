@@ -1,8 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+using System;
 
 public class Obstacle3 : Obstacle
 {
+	static public void Main(String[] args)
+	{
 
+	}
 }

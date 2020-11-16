@@ -7,7 +7,14 @@ public struct ObstacleComuneVariables
 	public int Damage
 	public int TierObstacle
 }
-
+public interface IDazeable
+{
+	void Daze();
+}
+public interface ISlowable
+{
+	void Slow();
+}
 public class Obstacle : MonoBehaviour
 {	
 	static public ObstacleComuneVariables OCV;

@@ -1,0 +1,31 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+using System;
+
+public class ObstacleArrow : Obstacle
+{
+	static public void Main(String[] args)
+	{
+		Console.WriteLine("\nThis is an obstacle like arrow or a rolling ball");
+		Initialize();
+		Console.WriteLine("\nPress D for activate damage");
+		char c = Console.ReadKey().KeyChar;
+		if(c == 'D')
+		{
+			CalculateTotalDamage();
+		}
+	}
+	static public void Initialize()
+	{
+		Console.WriteLine("\nSet value for speed")
+		char speedValue = Console.ReadKey().KeyChar;
+		OCV.Speed = speedValue;
+		Console.WriteLine("\nSet value for damage")
+		char damageValue = Console.ReadKey().KeyChar;
+		OCV.Damage = damageValue;
+		Console.WriteLine("\nSet value for tier obstacle")
+		char tierValue = Console.ReadKey().KeyChar;
+		OCV.TierObstacle = tierValue;
+	}
+}

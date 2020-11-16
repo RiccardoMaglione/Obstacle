@@ -1,0 +1,30 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+using System;
+
+public class ObstacleLava : ObstacleLiquid, ISlowable
+{
+	public LiquidVariables LV;
+	
+	static public void Main(String[] args)
+	{
+		Console.WriteLine("\nPress S for activate slow");
+		Console.WriteLine("\nPress D for activate damage");
+		char c = Console.ReadKey().KeyChar;
+		if(c == 'S')
+		{
+			ISlow();
+		}
+		if(c == 'D')
+		{
+			CalculateTotalDamage();
+		}
+
+	}
+
+	static public void ISlow()
+	{
+		PS.SpeedPlayer -= LV.DecelerationLiquid;
+	}
+}

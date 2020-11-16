@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public struct ObstacleLiquidVariables
 {
-
+        public int DecelerationLiquid;
 }
 
 public class ObstacleLiquid : Obstacle

@@ -1,0 +1,48 @@
+using System;
+
+public class ObstacleProps : Obstacle, IDaze
+{
+	static public void Main(String[] args)
+	{
+		Console.WriteLine("\nThis is an obstacle like props with life");
+		Initialize();
+		Console.WriteLine("\nPress D for activate damage");
+		char c = Console.ReadKey().KeyChar;
+		if(c == 'D' && OCV.Damage > 0)
+		{
+			CalculateTotalDamage();
+		}
+		Console.WriteLine("\nPress D for activate daze");
+		char i = Console.ReadKey().KeyChar;
+		if(i == 'I')
+		{
+			IDaze();
+		}
+	}
+	static public void Initialize()
+	{
+		Console.WriteLine("\nSet value for speed")
+		char speedValue = Console.ReadKey().KeyChar;
+		OCV.Speed = speedValue;
+		Console.WriteLine("\nSet value for damage")
+		char damageValue = Console.ReadKey().KeyChar;
+		OCV.Damage = damageValue;
+		Console.WriteLine("\nSet value for tier obstacle")
+		char tierValue = Console.ReadKey().KeyChar;
+		OCV.TierObstacle = tierValue;
+		Console.WriteLine("\nSet value for life")
+		char lifeValue = Console.ReadKey().KeyChar;
+		OCV.Life = lifeValue;
+		Console.WriteLine("\nSet value for resistence")
+		char resistenceValue = Console.ReadKey().KeyChar;
+		OCV.Resistnece = resistenceValue;
+	}
+	static public void ISlow()
+	{
+		int speedPlayer;
+		speedPlayer = PS.SpeedPlayer;
+		PS.SpeedPlayer = 0;
+		System.Threading.Thread.Sleep(2500);
+		PS.SpeedPlayer = speedPlayer;
+	}
+}

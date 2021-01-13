@@ -1,0 +1,26 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+using System
+
+public class ObstacleLiquidSlime : Obstacle, ISlow
+{
+	public LiquidVariables LV;
+	
+	static public void Main(String[] args)
+	{
+		Console.WriteLine("\nPress S for activate slow");
+		char c = Console.ReadKey().KeyChar;
+		if(c == 'S')
+		{
+			ISlow();
+		}
+
+	}
+
+	static public void ISlow()
+	{
+		PS.SpeedPlayer -= LV.DecelerationLiquid * 2;
+		PS.LifePlayer += 1;
+	}
+}

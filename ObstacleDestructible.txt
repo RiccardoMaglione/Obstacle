@@ -1,0 +1,27 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+using System;
+
+public class ObstacleDestructible : Obstacle
+{
+	static public void Main(String[] args)
+	{
+		Console.WriteLine("\nThis is an obstacle like rocks, doors or windows, but is destructible");
+		Initialize();
+	}
+	static public void Initialize()
+	{
+		Console.WriteLine("\nSet value for life")
+		char lifeValue = Console.ReadKey().KeyChar;
+		OCV.Life = lifeValue;
+		
+		Console.WriteLine("\nSet value for resistence")
+		char resistenceValue = Console.ReadKey().KeyChar;
+		OCV.Resistence = resistenceValue;
+		
+		Console.WriteLine("\nSet value for tier obstacle")
+		char tierValue = Console.ReadKey().KeyChar;
+		OCV.TierObstacle = tierValue;
+	}
+}
